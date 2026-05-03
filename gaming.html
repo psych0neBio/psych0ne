@@ -38,84 +38,145 @@
 
         <section class="gaming-section">
             <div class="container">
+                <!-- CS -->
                 <div class="game-showcase">
                     <div class="game-card large glass">
                         <div class="game-bg cs-bg"></div>
                         <div class="game-content">
-                            <div class="game-icon">
-                                <i class="fas fa-crosshairs"></i>
-                            </div>
+                            <div class="game-icon"><i class="fas fa-crosshairs"></i></div>
                             <h2>Counter-Strike</h2>
                             <div class="game-rank">
                                 <span class="rank-badge elite">2K ELO</span>
                                 <span class="rank-year">до 2023</span>
                             </div>
-                            <p>Высокий уровень игры в CS:GO. Отличное понимание меты, механик и командной работы. Играю на позициях, где важен аим и геймсенс.</p>
+                            <p>Высокий уровень игры в CS:GO. Отличное понимание меты, механик и командной работы.</p>
                             <div class="game-stats-row">
-                                <div class="g-stat">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Высокий рейтинг</span>
-                                </div>
-                                <div class="g-stat">
-                                    <i class="fas fa-bullseye"></i>
-                                    <span>Точный аим</span>
-                                </div>
-                                <div class="g-stat">
-                                    <i class="fas fa-brain"></i>
-                                    <span>Геймсенс</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="game-card large glass">
-                        <div class="game-bg dota-bg"></div>
-                        <div class="game-content">
-                            <div class="game-icon">
-                                <i class="fas fa-shield-halved"></i>
-                            </div>
-                            <h2>Dota 2</h2>
-                            <div class="game-rank">
-                                <span class="rank-badge immortal">Титан</span>
-                            </div>
-                            <p>Достиг ранга Титан в Dota 2. Глубокое понимание драфтов, макроигры и ротаций. Умею играть на разных ролях и адаптироваться под мету.</p>
-                            <div class="game-stats-row">
-                                <div class="g-stat">
-                                    <i class="fas fa-crown"></i>
-                                    <span>Ранг Титан</span>
-                                </div>
-                                <div class="g-stat">
-                                    <i class="fas fa-chess"></i>
-                                    <span>Стратегия</span>
-                                </div>
-                                <div class="g-stat">
-                                    <i class="fas fa-users"></i>
-                                    <span>Тимплей</span>
-                                </div>
+                                <div class="g-stat"><i class="fas fa-trophy"></i><span>Высокий рейтинг</span></div>
+                                <div class="g-stat"><i class="fas fa-bullseye"></i><span>Точный аим</span></div>
+                                <div class="g-stat"><i class="fas fa-brain"></i><span>Геймсенс</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="other-games">
+                <!-- CS Rank Map -->
+                <div class="rank-section">
+                    <h2 class="section-title">Путь в CS:GO</h2>
+                    <div class="rank-map glass">
+                        <div class="rank-track">
+                            <div class="rank-progress cs-progress"></div>
+                            <div class="rank-nodes">
+                                <div class="rank-node" data-label="Silver"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="Gold Nova"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="MG"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="DMG"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="LE"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="SMFC"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="GE"><i class="fas fa-star"></i></div>
+                                <div class="rank-node" data-label="Faceit 1-5"><i class="fas fa-bolt"></i></div>
+                                <div class="rank-node" data-label="Faceit 6-9"><i class="fas fa-bolt"></i></div>
+                                <div class="rank-node active" data-label="2K ELO"><i class="fas fa-crown"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CS Stats -->
+                <div class="stats-grid" id="cs-stats">
+                    <div class="stat-card glass">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="stat-value" data-target="3200">0</div>
+                        <div class="stat-name">Матчей</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-value" data-target="4500">0</div>
+                        <div class="stat-name">Часов в игре</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-crosshairs"></i>
+                        <div class="stat-value" data-target="42" data-suffix="%">0</div>
+                        <div class="stat-name">Точность (HS%)</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-percentage"></i>
+                        <div class="stat-value" data-target="54" data-suffix="%">0</div>
+                        <div class="stat-name">Винрейт</div>
+                    </div>
+                </div>
+                <p class="api-note"><i class="fas fa-info-circle"></i> Для автообновления CS-статы вставь Steam API Key и Steam64 ID в js/main.js</p>
+
+                <!-- Dota 2 -->
+                <div class="game-showcase" style="margin-top: 4rem;">
+                    <div class="game-card large glass">
+                        <div class="game-bg dota-bg"></div>
+                        <div class="game-content">
+                            <div class="game-icon"><i class="fas fa-shield-halved"></i></div>
+                            <h2>Dota 2</h2>
+                            <div class="game-rank"><span class="rank-badge immortal">Титан</span></div>
+                            <p>Достиг ранга Титан в Dota 2. Глубокое понимание драфтов, макроигры и ротаций.</p>
+                            <div class="game-stats-row">
+                                <div class="g-stat"><i class="fas fa-crown"></i><span>Ранг Титан</span></div>
+                                <div class="g-stat"><i class="fas fa-chess"></i><span>Стратегия</span></div>
+                                <div class="g-stat"><i class="fas fa-users"></i><span>Тимплей</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dota Rank Map -->
+                <div class="rank-section">
+                    <h2 class="section-title">Путь в Dota 2</h2>
+                    <div class="rank-map glass">
+                        <div class="rank-track">
+                            <div class="rank-progress dota-progress"></div>
+                            <div class="rank-nodes">
+                                <div class="rank-node" data-label="Herald"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Guardian"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Crusader"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Archon"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Legend"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Ancient"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Divine"><i class="fas fa-shield"></i></div>
+                                <div class="rank-node" data-label="Immortal"><i class="fas fa-gem"></i></div>
+                                <div class="rank-node active" data-label="Титан"><i class="fas fa-crown"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dota Stats -->
+                <div class="stats-grid" id="dota-stats">
+                    <div class="stat-card glass">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="stat-value" id="dota-matches">—</div>
+                        <div class="stat-name">Матчей</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-value" id="dota-winrate">—</div>
+                        <div class="stat-name">Винрейт</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-star"></i>
+                        <div class="stat-value" id="dota-rank">—</div>
+                        <div class="stat-name">Ранг (MMR)</div>
+                    </div>
+                    <div class="stat-card glass">
+                        <i class="fas fa-bolt"></i>
+                        <div class="stat-value" id="dota-kda">—</div>
+                        <div class="stat-name">Средний KDA</div>
+                    </div>
+                </div>
+                <p class="api-note"><i class="fas fa-info-circle"></i> Для авто-подгрузки Dota-статы вставь Account ID в js/main.js (переменная DOTA_ACCOUNT_ID)</p>
+
+                <div class="other-games" style="margin-top: 4rem;">
                     <h2 class="section-title">Другие дисциплины</h2>
                     <div class="mini-games-grid">
-                        <div class="mini-game glass">
-                            <i class="fas fa-desktop"></i>
-                            <span>Различные PC-игры</span>
-                        </div>
-                        <div class="mini-game glass">
-                            <i class="fas fa-mouse"></i>
-                            <span>Высокая точность</span>
-                        </div>
-                        <div class="mini-game glass">
-                            <i class="fas fa-keyboard"></i>
-                            <span>Быстрая реакция</span>
-                        </div>
-                        <div class="mini-game glass">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Анализ меты</span>
-                        </div>
+                        <div class="mini-game glass"><i class="fas fa-desktop"></i><span>Различные PC-игры</span></div>
+                        <div class="mini-game glass"><i class="fas fa-mouse"></i><span>Высокая точность</span></div>
+                        <div class="mini-game glass"><i class="fas fa-keyboard"></i><span>Быстрая реакция</span></div>
+                        <div class="mini-game glass"><i class="fas fa-chart-line"></i><span>Анализ меты</span></div>
                     </div>
                 </div>
             </div>
